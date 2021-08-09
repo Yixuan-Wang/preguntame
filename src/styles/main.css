@@ -1,0 +1,54 @@
+html,
+body,
+#app {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary: #1682ee;
+  --color-secondary: #eecd13;
+}
+
+#root {
+  width: 100vw;
+  max-width: 1024px;
+  height: 100vh;
+  margin: 0 auto;
+}
+html.dark {
+  background: #121212;
+}
+
+.btn {
+  @apply px-4 py-1 rounded inline-block
+    bg-primary text-white cursor-pointer
+    hover:bg-secondary hover:text-black
+    disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50;
+}
+
+.icon-btn {
+  @apply inline-flex gap-1 items-center
+    cursor-pointer select-none
+    opacity-75 transition duration-200 ease-in-out;
+}
+
+.icon-btn:hover,
+.icon-btn.active {
+  @apply opacity-100 text-primary;
+}
+
+
+
+svg {
+  @apply align-text-bottom;
+}
+
+button {
+  @apply !outline-none;
+}
+
+input,
+.input {
+  @apply !outline-none active:!outline-none bg-transparent;
+}

@@ -1,0 +1,19 @@
+{
+  "cSpell.words": ["Vitesse"],
+  "prettier.enable": false,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+  },
+  "css.validate": false,
+  "files.associations": {
+    "*.css": "css"
+  },
+  "windicss.includeLanguages": {
+    "vue": "vue", // css, js
+    "css": "css",
+    "postcss": "postcss"
+  },
+  "volar.tsPlugin": false,
+  "vite.port": 4001
+}
