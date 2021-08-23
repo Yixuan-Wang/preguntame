@@ -35,7 +35,7 @@ const coreStore = useCoreStore()
         <mdi-information />
         <span></span>
       </button>
-      <a class="icon-btn" rel="noreferrer" href="https://github.com/antfu/vitesse-lite" target="_blank" title="GitHub">
+      <a class="icon-btn" rel="noreferrer" href="https://github.com/Yixuan-Wang/preguntame" target="_blank" title="GitHub">
         <mdi-github />
       </a>
     </span>
