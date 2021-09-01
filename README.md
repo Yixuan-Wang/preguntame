@@ -1,18 +1,14 @@
-<style>svg { vertical-align: text-bottom; }</style>
-
 <p align='center'>
-  <img src='public/favicon.svg' alt='Pregúntame' width='256'/>
+  <img src='public/favicon.svg' alt='Pregúntame' width='128'/>
 </p>
 
-<div style="text-align: center">
-<h1 style="margin-bottom: 0.1em">Pregúntame</h1>
-<p>[pɾeˈɣuntame], Spanish for 'you-ask-me'</p>
+<div align='center'>
+<h1>Pregúntame</h1>
+<p>[pɾeˈɣuntame], Spanish for 'you-ask-me'<br/>An integrated search application with minimalism designs.</p>
 <img src="https://img.shields.io/github/v/release/yixuan-wang/preguntame?color=%231682ee&label=release" alt="Latest version">
 </div>
 
 <br/>
-
-A integrated search application with minimalism designs
 
 ## Features
 
@@ -22,8 +18,7 @@ A integrated search application with minimalism designs
 
 ## Configuration
 
-Fill in your Gitee access token(authorized with gist permission) and Gitee Gist ID in the configuration panel 
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.2em" height="1.2em"  preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2m4 4V4h-4v2h4z" fill="currentColor"></path></svg>. Your Gitee gist filename should be `engines.yaml`. Then use <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.2em" height="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M12 18a6 6 0 0 1-6-6c0-1 .25-1.97.7-2.8L5.24 7.74A7.93 7.93 0 0 0 4 12a8 8 0 0 0 8 8v3l4-4l-4-4m0-11V1L8 5l4 4V6a6 6 0 0 1 6 6c0 1-.25 1.97-.7 2.8l1.46 1.46A7.93 7.93 0 0 0 20 12a8 8 0 0 0-8-8z" fill="currentColor"></path></svg> to sync manually.
+Fill in your Gitee access token(authorized with gist permission) and Gitee Gist ID in the configuration panel(suitcase button). Your Gitee gist filename should be `engines.yaml`. Then use sync button to sync manually.
 
 An example of the `engines.yaml` file:
 ```yaml
