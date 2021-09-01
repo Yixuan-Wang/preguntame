@@ -1,80 +1,58 @@
+<style>svg { vertical-align: text-bottom; }</style>
+
 <p align='center'>
-  <img src='https://user-images.githubusercontent.com/11247099/111864893-a457fd00-899e-11eb-9f05-f4b88987541d.png' alt='Vitesse - Opinionated Vite Starter Template' width='600'/>
+  <img src='public/favicon.svg' alt='Pregúntame' width='256'/>
 </p>
 
-<h6 align='center'>
-<a href="https://vitesse-lite.netlify.app/">Live Demo</a>
-</h6>
+<div style="text-align: center">
+<h1 style="margin-bottom: 0.1em">Pregúntame</h1>
+<p>[pɾeˈɣuntame], Spanish for 'you-ask-me'</p>
+<img src="https://img.shields.io/github/v/release/yixuan-wang/preguntame?color=%231682ee&label=release" alt="Latest version">
+</div>
 
-<h5 align='center'>
-<b>Lightweight version of <a href="https://github.com/antfu/vitesse">Vitesse</a></b>
-</h5>
+<br/>
 
-<br>
-
-## Dropped Features
-
-- ~~i18n~~
-- ~~Layouts~~
-- ~~SSG~~
-- ~~PWA~~
-- ~~Markdown~~
+A integrated search application with minimalism designs
 
 ## Features
 
-- ⚡️ [Vue 3](https://github.com/vuejs/vue-next), [Vite 2](https://github.com/vitejs/vite), [pnpm](https://pnpm.js.org/), [ESBuild](https://github.com/evanw/esbuild) - born with fastness
+- Use configuration files(currently using Gitee Gists), easy to expand or sync across all devices.
+- Minimalism design. Simply type directives to launch search. Also compatible with full-width characters when using Japanese IME.
+- Ability to search in multiple services at the same time.
 
-- 🗂 [File based routing](./src/pages)
+## Configuration
 
-- 📦 [Components auto importing](./src/components)
+Fill in your Gitee access token(authorized with gist permission) and Gitee Gist ID in the configuration panel 
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.2em" height="1.2em"  preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2m4 4V4h-4v2h4z" fill="currentColor"></path></svg>. Your Gitee gist filename should be `engines.yaml`. Then use <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.2em" height="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M12 18a6 6 0 0 1-6-6c0-1 .25-1.97.7-2.8L5.24 7.74A7.93 7.93 0 0 0 4 12a8 8 0 0 0 8 8v3l4-4l-4-4m0-11V1L8 5l4 4V6a6 6 0 0 1 6 6c0 1-.25 1.97-.7 2.8l1.46 1.46A7.93 7.93 0 0 0 20 12a8 8 0 0 0-8-8z" fill="currentColor"></path></svg> to sync manually.
 
-- 🎨 [Windi CSS](https://github.com/windicss/windicss) - next generation utility-first CSS framework
-
-- 😃 [Use icons from any icon sets, with no compromise](./src/components)
-
-- 🔥 Use the [new `<script setup>` style](https://github.com/vuejs/rfcs/pull/227)
-
-- 🦾 TypeScript, of course
-
-- ☁️ Deploy on Netlify, zero-config
-
-<br>
-
-See [Vitesse](https://github.com/antfu/vitesse) for full featureset.
-
-## Pre-packed
-
-### UI Frameworks
-
-- [Windi CSS](https://github.com/windicss/windicss) (On-demand [TailwindCSS](https://tailwindcss.com/)) - lighter and faster, with a bunch of additional features!
-
-### Icons
-
-- [Iconify](https://iconify.design) - use icons from any icon sets [🔍Icônes](https://icones.netlify.app/)
-- [`vite-plugin-icons`](https://github.com/antfu/vite-plugin-icons) - icons as Vue components
-
-### Plugins
-
-- [Vue Router](https://github.com/vuejs/vue-router)
-  - [`vite-plugin-pages`](https://github.com/hannoeru/vite-plugin-pages) - file system based routing
-- [`vite-plugin-components`](https://github.com/antfu/vite-plugin-components) - components auto import
-- [`vite-plugin-windicss`](https://github.com/antfu/vite-plugin-windicss) - WindiCSS support
-- [VueUse](https://github.com/antfu/vueuse) - collection of useful composition APIs
-- [`@vueuse/head`](https://github.com/vueuse/head) - manipulate document head reactively
-- [`vue-global-api`](https://github.com/antfu/vue-global-api) - Use Vue Composition API globally
-
-## Try it now!
-
-### GitHub Template
-
-[Create a repo from this template on GitHub](https://github.com/antfu/vitesse-lite/generate).
-
-### Clone to local
-
-If you prefer to do it manually with the cleaner git history
-
-```bash
-npx degit antfu/vitesse-lite my-vitesse-app
-cd my-vitesse-app
-pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
+An example of the `engines.yaml` file:
+```yaml
+bing: # key, not used in the app
+  name: Bing # name displayed in the app
+  pattern: 'https://www.bing.com/search?q={}' # use `{}` as placeholder of the search string
+  shorthand: b # shorthand used in directives
+baidu:
+  name: Baidu
+  pattern: 'https://www.baidu.com/s?word={}'
+  shorthand: bd
+duckduckgo:
+  name: DuckDuckGo
+  pattern: 'https://duckduckgo.com/?q={}'
+  shorthand: d
 ```
+
+It is recommended not to use accent marks, fullwidth counterparts of letters, or punctuations(might be reserved for later use) in shorthands.
+
+## Directives
+
+Currently we have one directive appointing the **search engine**: `@{your_shorthand}`. You can attach this directive anywhere you like in your string, but a whitespace character must be used to separate it with the content you want to search. Use `\` to escape the `@` character
+
+Simply use multiple directives to search in multiple search engines.
+
+For example(using the configuration above):
+
+- `@b hello world` search 'hello world' in Bing.
+- `@d hello world @bd` search 'hello world' in DuckDuckGo and Baidu at the same time. 
+- `＠ｄ　ハロー・ワールド` search 'ハロー・ワールド' in DuckDuckGo. The full-width directives and whitespaces are recognized.
+- `\@github.com` search '@github.com'.
+
