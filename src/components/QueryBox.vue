@@ -32,6 +32,7 @@ const handleCompositionEnd = (event: Event) => {
       :value="modelValue"
       type="text"
       class="input flex-auto"
+      autofocus
       @compositionstart="isTyping = true"
       @compositionend="handleCompositionEnd"
       @input="handleInput"
