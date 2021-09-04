@@ -10,8 +10,7 @@ const coreStore = useCoreStore()
 
 const go = () => {
   (query.value.engines.length ? query.value.engines : coreStore.engines.slice(0, 1)).map(genUrlFromEngine(query.value)).forEach((url) => {
-    const newWindow = window.open('', '_blank')
-    setTimeout(() => newWindow!.location.href = url, 100)
+    window.open(url)
   })
 }
 </script>
