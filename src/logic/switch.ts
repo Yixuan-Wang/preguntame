@@ -1,27 +1,23 @@
-import { isRef, Ref, ref } from 'vue-demi'
+import { isRef, Ref, shallowRef } from 'vue-demi'
 
 /**
- * A int ref with a switch
+ * A ref with a switch on an array
  *
- * @param min
- * @param max
- * @param [initialValue=0]
+ * @param array
+ * @param initialValue
  */
-// export function useSwitch(min: number, max: number, value: Ref<number>): (value?: number) => number
-// export function useSwitch(min: number, max: number, initialValue?: number): [Ref<number>, (value?: number) => number]
 
-export function useSwitch(min: number, max: number, initialValue: number | Ref<number> = 0) {
+export function useSwitch<T>(array: Array<T>, initialValue: T | Ref<T>) {
   if (isRef(initialValue)) {
-    return (value?: number) => {
-      const newValue = value ?? (initialValue.value - min + 1) % (max - min + 1) + min
-      initialValue.value = newValue <= max && newValue >= min ? newValue : min
+    return (value?: T) => {
+      initialValue.value = value ?? array[(array.indexOf(initialValue.value) + 1) % array.length]
     }
   }
   else {
-    const refSwitch = ref(initialValue)
-    const Switch = (value?: number) => {
-      const newValue = value ?? (refSwitch.value - min + 1) % (max - min + 1) + min
-      refSwitch.value = newValue <= max && newValue >= min ? newValue : min
+    const refSwitch = shallowRef(initialValue)
+
+    const Switch = (value?: T) => {
+      refSwitch.value = value ?? array[(array.indexOf(refSwitch.value) + 1) % array.length]
     }
 
     return [refSwitch, Switch] as const

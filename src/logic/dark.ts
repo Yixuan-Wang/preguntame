@@ -45,4 +45,4 @@ export function useDarkMode() {
 }
 
 export const darkMode = useDarkMode()
-export const toggleDarkMode = useSwitch(-1, 1, darkMode)
+export const toggleDarkMode = useSwitch([DarkMode.Auto, DarkMode.Light, DarkMode.Dark], darkMode)
