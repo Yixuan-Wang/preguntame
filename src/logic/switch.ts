@@ -7,6 +7,9 @@ import { isRef, Ref, shallowRef } from 'vue-demi'
  * @param initialValue
  */
 
+export function useSwitch<T>(array: Array<T>, initialValue: Ref<T>): (value?: T) => void
+export function useSwitch<T>(array: Array<T>, initialValue: T): [Ref<T>, ((value?: T) => void)]
+
 export function useSwitch<T>(array: Array<T>, initialValue: T | Ref<T>) {
   if (isRef(initialValue)) {
     return (value?: T) => {

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { mapWritableState } from 'pinia'
-import { darkMode, toggleDarkMode, DarkMode, getGist } from '~/logic'
+import { darkMode, toggleDarkMode, DarkMode } from '~/logic'
 import { useUIStore, useCoreStore } from '~/stores'
 
 const uiStore = mapWritableState(useUIStore, ['isPopupGistOpen', 'isPopupInfoOpen'])
