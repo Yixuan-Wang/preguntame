@@ -3,7 +3,7 @@
   "name": "preguntame",
   "version": "0.0.1-4",
   "scripts": {
-    "dev": "vite --port 3333 --open",
+    "dev": "vite --port 4001 --open --host",
     "build": "cross-env NODE_ENV=production vite build --base=/preguntame/",
     "preview": "vite preview"
   },
