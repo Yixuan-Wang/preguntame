@@ -10,15 +10,9 @@ const coreStore = useCoreStore()
 
 const go = () => {
   (query.value.engines.length ? query.value.engines : coreStore.engines.slice(0, 1)).map(genUrlFromEngine(query.value)).forEach((url) => {
-    const link = document.createElement('a')
-    link.target = '_blank'
-    link.rel = 'noopener'
-    link.referrerPolicy = 'no-referrer'
-    link.href = url
-    link.click()
+    const newWindow = window.open('', '_blank')
+    setTimeout(() => newWindow!.location.href = url, 100)
   })
-  // if (name.value)
-  //   router.push(`/hi/${encodeURIComponent(name.value)}`)
 }
 </script>
 
