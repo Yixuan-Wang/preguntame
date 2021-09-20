@@ -14,7 +14,6 @@
 
 - Use configuration files(currently using Gitee Gists), easy to expand or sync across all devices.
 - Minimalism design. Simply type directives to launch search. Also compatible with full-width characters when using Japanese IME.
-- Ability to search in multiple services at the same time.
 
 ## Configuration
 
@@ -42,7 +41,7 @@ It is recommended not to use accent marks, fullwidth counterparts of letters, or
 
 Currently we have one directive appointing the **search engine**: `@{your_shorthand}`. You can attach this directive anywhere you like in your string, but a whitespace character must be used to separate it with the content you want to search. Use `\` to escape the `@` character
 
-Simply use multiple directives to search in multiple search engines.
+You may use multiple directives to search in multiple search engines, but this feature might not be available because of popup blockers.
 
 For example(using the configuration above):
 
