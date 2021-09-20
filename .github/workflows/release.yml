@@ -51,5 +51,5 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          body: ${{ steps.github_release.outputs.changelog }}
+          body: ${{ steps.build_changelog.outputs.changelog }}
           prerelease: contains(github.ref, '-')
