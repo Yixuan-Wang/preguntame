@@ -38,7 +38,14 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     steps:
+      - name: "Build Changelog"
+        id: build_changelog
+        uses: mikepenz/release-changelog-builder-action@{latest-release}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
+          body: ${{ steps.github_release.outputs.changelog }}
           prerelease: contains(github.ref, '-')
