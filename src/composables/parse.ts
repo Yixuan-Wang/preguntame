@@ -74,6 +74,7 @@ function composeQuery(prev: Query, exp: QueryExpression, idx: number, arr: Query
 
 export function initStore(init: typeof useCoreStore) {
   coreStore = init()
+  coreStore.updateGist()
 }
 
 export function toQuery(input: string): Query {

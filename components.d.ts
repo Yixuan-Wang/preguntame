@@ -22,6 +22,8 @@ declare module 'vue' {
     MdiInformation: typeof import('virtual:vite-icons/mdi/information')['default']
     MdiSearch: typeof import('virtual:vite-icons/mdi/search')['default']
     MdiSync: typeof import('virtual:vite-icons/mdi/sync')['default']
+    MdiSyncAlert: typeof import('virtual:vite-icons/mdi/sync-alert')['default']
+    MdiSyncOff: typeof import('virtual:vite-icons/mdi/sync-off')['default']
     PopupGist: typeof import('./src/components/PopupGist.vue')['default']
     PopupInfo: typeof import('./src/components/PopupInfo.vue')['default']
     QueryBox: typeof import('./src/components/QueryBox.vue')['default']

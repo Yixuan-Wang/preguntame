@@ -1,0 +1,116 @@
+# Search engines
+baidu:
+  name: Baidu
+  pattern: 'https://www.baidu.com/s?word={}'
+  shorthand: bd
+bing:
+  name: Bing
+  pattern: 'https://www.bing.com/search?q={}'
+  shorthand: b
+duckduckgo:
+  name: DuckDuckGo
+  pattern: 'https://duckduckgo.com/?q={}'
+  shorthand: d
+google:
+  name: Google
+  pattern: 'https://google.com/search?q={}'
+  shorthand: g
+
+# Encyclopedia
+baidu_baike:
+  name: BDBaike
+  pattern: 'https://baike.baidu.com/search/word?word={}'
+  shorthand: bk
+wikipedia:
+  name: Wikipedia
+  pattern: 'https://en.wikipedia.org/w/index.php?title=Special:Search&search={}'
+  shorthand: w
+wikipedia_zh:
+  name: Wikipedia(zh)
+  pattern: 'https://zh.wikipedia.org/w/index.php?title=Special:Search&search={}'
+  shorthand: wz
+
+# Scholar
+google_scholar:
+  name: GScholar
+  pattern: 'https://scholar.google.com/scholar?q={}'
+  shorthand: gs
+baidu_scholar:
+  name: BDScholar
+  pattern: 'https://xueshu.baidu.com/s?wd={}'
+  shorthand: bds
+
+# Social
+oed:
+  name: OED
+  pattern: 'https://oed.com/search?searchType=dictionary&q={}'
+  shorthand: oed
+merriam_webster:
+  name: MWebster
+  pattern: 'https://www.merriam-webster.com/dictionary/{}'
+  shorthand: mw
+
+# Dictionary & Translation
+google_translate:
+  name: GTrans
+  pattern: 'https://translate.google.cn/?sl=auto&tl=en&text={}&op=translate'
+  shorthand: gt
+deepl:
+  name: DeepL
+  pattern: 'https://www.deepl.com/translator#auto/en/{}'
+  shorthand: dl
+
+# Social
+github:
+  name: GitHub
+  pattern: 'https://github.com/search?q={}'
+  shorthand: gh
+zhihu:
+  name: Zhihu
+  pattern: 'https://www.zhihu.com/search?q={}&type=content'
+  shorthand: zh
+weibo:
+  name: Weibo
+  pattern: 'http://s.weibo.com/weibo/{}?frm=opensearch'
+  shorthand: wb
+douban:
+  name: Douban
+  pattern: 'https://www.douban.com/search?q=%s'
+  shorthand: db
+
+facebook:
+  name: Facebook
+  pattern: 'https://www.facebook.com/search/top/?q={}&opensearch=1'
+  shorthand: fb
+twitter:
+  name: Twitter
+  pattern: 'https://twitter.com/search?q={}'
+  shorthand: tw
+
+# Entertainment
+youtube:
+  name: YouTube
+  pattern: 'https://www.youtube.com/results?search_query={}'
+  shorthand: yt
+bilibili:
+  name: Bilibili
+  pattern: 'https://search.bilibili.com/all?keyword={}'
+  shorthand: bl
+steam:
+  name: Steam
+  pattern: 'https://store.steampowered.com/search/?term={}'
+  shorthand: st
+
+# Shopping
+jd:
+  name: JD
+  pattern: 'https://search.jd.com/Search?keyword={}'
+  shorthand: jd
+taobao:
+  name: Taobao
+  pattern: 'https://s.taobao.com/search?q={}'
+  shorthand: tb
+amazon:
+  name: Amazon
+  pattern: 'https://www.amazon.com/s?k={}'
+  shorthand: az

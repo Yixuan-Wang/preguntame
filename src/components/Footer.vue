@@ -14,7 +14,14 @@ const coreStore = useCoreStore()
 <template>
   <nav class="my-0 lg:my-4 grid lg:text-lg">
     <span class="flex gap-4 justify-self-start">
-      <button id="btn-popup-gist" class="icon-btn" :class="{ active: isPopupGistOpen }" @pointerdown.stop="isPopupGistOpen = !isPopupGistOpen">
+      <button
+        id="btn-popup-gist"
+        class="icon-btn"
+        :class="{
+          active: isPopupGistOpen,
+        }"
+        @pointerdown.stop="isPopupGistOpen = !isPopupGistOpen"
+      >
         <mdi-briefcase />
       </button>
       <button class="icon-btn" @click="toggleDarkMode()">
@@ -26,7 +33,8 @@ const coreStore = useCoreStore()
 
     <span class="flex gap-4 justify-self-center">
       <button class="icon-btn" @click="coreStore.updateGist">
-        <mdi-sync />
+        <mdi-sync-off v-if="coreStore.isFallback" class="text-gray-500" />
+        <mdi-sync v-else />
       </button>
     </span>
 
