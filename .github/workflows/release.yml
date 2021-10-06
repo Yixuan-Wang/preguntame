@@ -46,7 +46,7 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.MIRROR_SSH_PRIVATE_KEY }}
           REMOTE_HOST: ${{ secrets.MIRROR_HOST }}
           REMOTE_USER: ${{ secrets.MIRROR_USER }}
-          SOURCE: ./dist
+          SOURCE: dist/.
           TARGET: ${{ secrets.MIRROR_TARGET }}
 
   release:
