@@ -35,6 +35,20 @@ jobs:
           publish_branch: gh-pages
           cname: preguntame.yixuan-wang.site
 
+  mirror:
+    name: Mirror
+    runs-on: ubuntu-latest
+    needs: build-and-deploy
+    steps:
+      - name: Mirror
+        uses: easingthemes/ssh-deploy@v2
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.MIRROR_SSH_PRIVATE_KEY }}
+          REMOTE_HOST: ${{ secrets.MIRROR_HOST }}
+          REMOTE_USER: ${{ secrets.MIRROR_USER }}
+          SOURCE: ./dist
+          TARGET: ${{ secrets.MIRROR_TARGET }}
+
   release:
     name: Release
     runs-on: ubuntu-latest
