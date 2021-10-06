@@ -1,18 +1,15 @@
 <script setup lang="ts">
+import { useRoute } from 'vue-router'
 import { toQuery } from '~/composables/parse'
-import { genUrlFromEngine } from '~/composables/launch'
+import { launch } from '~/composables/launch'
 import { useCoreStore } from '~/stores'
 
-const input = ref('')
+const route = useRoute()
+
+const input = ref(route.query?.q as string ?? '')
 const query = computed(() => shallowReactive(toQuery(input.value)))
 
 const coreStore = useCoreStore()
-
-const go = () => {
-  (query.value.engines.length ? query.value.engines : coreStore.engines.slice(0, 1)).map(genUrlFromEngine(query.value)).forEach((url) => {
-    window.open(url)
-  })
-}
 </script>
 
 <template>
@@ -33,12 +30,12 @@ const go = () => {
       <QueryBox
         v-model="input"
         :query="query"
-        @keypress.enter.exact.prevent="go"
+        @keypress.enter.exact.prevent="launch(query, coreStore)"
       />
       <button
         class="icon-btn"
         :disabled="!input"
-        @click="go"
+        @click="launch(query, coreStore)"
       >
         <mdi-search />
       </button>
