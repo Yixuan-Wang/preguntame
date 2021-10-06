@@ -45,7 +45,6 @@ jobs:
         with:
           configuration: ".github/config/changelog.json"
           commitMode: true
-          ignorePreReleases: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
