@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "preguntame",
-  "version": "0.1.0-3",
+  "version": "0.1.0-4",
   "scripts": {
     "dev": "vite --port 4571 --open --host",
     "build": "cross-env NODE_ENV=production vite build",
