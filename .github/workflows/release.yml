@@ -33,6 +33,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           publish_branch: gh-pages
+          cname: preguntame.yixuan-wang.site
 
   release:
     name: Release
