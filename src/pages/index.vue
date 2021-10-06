@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
 import { toQuery } from '~/composables/parse'
-import { launch } from '~/composables/launch'
+import { genLaunchFunc } from '~/composables/launch'
 import { useCoreStore } from '~/stores'
 
 const route = useRoute()
@@ -10,6 +10,7 @@ const input = ref(route.query?.q as string ?? '')
 const query = computed(() => shallowReactive(toQuery(input.value)))
 
 const coreStore = useCoreStore()
+const launch = genLaunchFunc(coreStore)
 </script>
 
 <template>
@@ -30,12 +31,12 @@ const coreStore = useCoreStore()
       <QueryBox
         v-model="input"
         :query="query"
-        @keypress.enter.exact.prevent="launch(query, coreStore)"
+        @keypress.enter.exact.prevent="launch(query)"
       />
       <button
         class="icon-btn"
         :disabled="!input"
-        @click="launch(query, coreStore)"
+        @click="launch(query)"
       >
         <mdi-search />
       </button>

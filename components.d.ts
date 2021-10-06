@@ -16,6 +16,7 @@ declare module 'vue' {
     MdiBrightness7: typeof import('virtual:vite-icons/mdi/brightness7')['default']
     MdiBrightnessAuto: typeof import('virtual:vite-icons/mdi/brightness-auto')['default']
     MdiCloud: typeof import('virtual:vite-icons/mdi/cloud')['default']
+    MdiConnection: typeof import('virtual:vite-icons/mdi/connection')['default']
     MdiDatabase: typeof import('virtual:vite-icons/mdi/database')['default']
     MdiGithub: typeof import('virtual:vite-icons/mdi/github')['default']
     MdiInformation: typeof import('virtual:vite-icons/mdi/information')['default']
