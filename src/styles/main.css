@@ -8,14 +8,22 @@ body,
 :root {
   --color-primary: #1682ee;
   --color-secondary: #eecd13;
+  --vh: 1vh;
 }
 
 #root {
   width: 100vw;
   max-width: 1024px;
   height: 100vh;
+  height: calc(100 * var(--vh, 1vh));
   margin: 0 auto;
 }
+
+.h-realfull {
+  height: 100vh;
+  height: calc(100 * var(--vh, 1vh));
+}
+
 html.dark {
   background: #121212;
 }
