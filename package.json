@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vite --port 4571 --open --host",
     "build": "cross-env NODE_ENV=production vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "https-preview": "PORT=4572 serve dist"
   },
   "dependencies": {
     "@vueuse/core": "^5.3.0",
@@ -30,6 +31,7 @@
     "@vue/compiler-sfc": "^3.2.4",
     "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
+    "https-localhost": "^4.7.0",
     "pnpm": "^6.11.5",
     "typescript": "^4.3.5",
     "vite": "^2.4.4",

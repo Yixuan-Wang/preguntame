@@ -8,6 +8,7 @@ import { createPinia } from 'pinia'
 import { createRouter, createWebHistory } from 'vue-router'
 import routes from 'virtual:generated-pages'
 import { createHead } from '@vueuse/head'
+import { registerSW } from 'virtual:pwa-register'
 import App from './App.vue'
 
 // windicss layers
@@ -17,6 +18,8 @@ import './styles/main.css'
 import 'virtual:windi-utilities.css'
 import { initStore } from './composables/parse'
 import { useCoreStore } from './stores'
+
+registerSW({ immediate: true })
 
 const app = createApp(App)
 const router = createRouter({
