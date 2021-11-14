@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// @ts-nocheck
 const props = defineProps<{
   modelValue: string
   query: Query
@@ -33,6 +34,7 @@ const handleCompositionEnd = (event: Event) => {
       type="text"
       class="input flex-auto"
       autofocus
+      autocomplete="off"
       @compositionstart="isTyping = true"
       @compositionend="handleCompositionEnd"
       @input="handleInput"
